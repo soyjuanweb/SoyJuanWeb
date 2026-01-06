@@ -351,4 +351,81 @@ body::before {
         height: 280px;
     }
 }
+/* --- SECCIÓN REDES SOCIALES --- */
+.redes-sociales {
+    padding: 60px 20px;
+    background: rgba(0,0,0,0.6);
+    text-align: center;
+    color: #fff;
+}
+
+.redes-sociales h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #00ffff;
+}
+
+.redes-sociales .subtitulo-redes {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #aaffff;
+}
+
+.redes-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.red-social {
+    background: rgba(0,0,0,0.4);
+    border: 2px solid #00ffff;
+    border-radius: 15px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.red-social:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,255,255,0.5);
+}
+
+.red-social img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.red-social h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #00ffff;
+}
+
+.red-social p {
+    font-size: 0.95rem;
+    color: #e0f7ff;
+}
+
+/* Colores específicos de cada red */
+.facebook h3 { color: #1877f2; }
+.instagram h3 { color: #e4405f; }
+.tiktok h3 { color: #69c9d0; }
+.youtube h3 { color: #ff0000; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .redes-galeria {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .red-social {
+        width: 80%;
+    }
+}
+
 
