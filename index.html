@@ -6,40 +6,8 @@
     <title>SoyJuanWeb | Desarrollo Web</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body><!-- Pelota rebotando -->
-<div id="pelota">
-  <span>FLAC</span>
-</div>
 
-<script>
-  const pelota = document.getElementById("pelota");
-
-  let x = 50;
-  let y = 50;
-  let dx = 2.2;
-  let dy = 2.2;
-
-  const size = 80;
-
-  function moverPelota() {
-    const ancho = window.innerWidth;
-    const alto = window.innerHeight;
-
-    x += dx;
-    y += dy;
-
-    if (x + size >= ancho || x <= 0) dx *= -1;
-    if (y + size >= alto || y <= 0) dy *= -1;
-
-    pelota.style.left = x + "px";
-    pelota.style.top = y + "px";
-
-    requestAnimationFrame(moverPelota);
-  }
-
-  moverPelota();
-</script>
-
+<body>
 
 <header class="top">
     <h1>SOYJUANWEB</h1>
@@ -68,7 +36,6 @@
             </div>
         </div>
 
-        <!-- LAPTOP 3D -->
         <div class="laptop">
             <div class="pantalla">
                 <span>&lt;/&gt; SOYJUANWEB</span>
@@ -97,7 +64,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE MODELOS DE PÁGINAS -->
     <section class="modelos">
         <h2>Modelos de páginas</h2>
         <p class="modelos-sub">Diseños reales según tu rubro</p>
@@ -126,57 +92,48 @@
                     <h3>📱 Celulares</h3>
                     <p>Tecnología · Accesorios · Servicio</p>
                 </div>
-</div>
-
             </div>
 
         </div>
     </section>
 
 </main>
-<!-- SECCIÓN REDES SOCIALES -->
+
 <section class="redes-sociales">
     <h2>Publicidad en redes sociales</h2>
-    <p class="subtitulo-redes">Promocionamos tu contenido según tus preferencias semanalmente</p>
+    <p class="subtitulo-redes">
+        Promocionamos tu contenido según tus preferencias semanalmente
+    </p>
 
     <div class="redes-galeria">
 
-        <div class="red-social facebook">
-            <img src="facebook.png" alt="Facebook">
-            <div class="red-info">
-                <h3>Facebook</h3>
-                <p>Trabajamos con publicidad de Facebook para promocionar semanalmente tu contenido según tus preferencias.</p>
-            </div>
+        <div class="red-social">
+            <img src="facebook.png">
+            <h3>Facebook</h3>
+            <p>Publicidad semanal en Facebook.</p>
         </div>
 
-        <div class="red-social instagram">
-            <img src="instagram.png" alt="Instagram">
-            <div class="red-info">
-                <h3>Instagram</h3>
-                <p>Publicidad en Instagram y marketing de reels para mostrar tu negocio de manera profesional.</p>
-            </div>
+        <div class="red-social">
+            <img src="instagram.png">
+            <h3>Instagram</h3>
+            <p>Marketing y reels profesionales.</p>
         </div>
 
-        <div class="red-social tiktok">
-            <img src="tiktok.png" alt="TikTok">
-            <div class="red-info">
-                <h3>TikTok</h3>
-                <p>Campañas de TikTok adaptadas a tu rubro para maximizar visibilidad y engagement.</p>
-            </div>
+        <div class="red-social">
+            <img src="tiktok.png">
+            <h3>TikTok</h3>
+            <p>Campañas orientadas a resultados.</p>
         </div>
 
-        <div class="red-social youtube">
-            <img src="youtube.png" alt="YouTube">
-            <div class="red-info">
-                <h3>YouTube</h3>
-                <p>Promoción de videos en YouTube para que tu contenido llegue a más personas cada semana.</p>
-            </div>
+        <div class="red-social">
+            <img src="youtube.png">
+            <h3>YouTube</h3>
+            <p>Promoción de videos semanal.</p>
         </div>
 
     </div>
 </section>
 
-<!-- IPHONE FLOTANTE CON LOGOS -->
 <div class="iphone-float">
     <div class="iphone">
         <div class="iphone-screen"></div>
@@ -187,6 +144,36 @@
 </div>
 
 <div class="tech-lines"></div>
+
+<!-- PELOTA FLAC -->
+<div id="pelota-flac">FLAC</div>
+
+<script>
+(function () {
+    const pelota = document.getElementById("pelota-flac");
+    let x = 100, y = 100;
+    let dx = 2.5, dy = 2.5;
+    const size = 70;
+
+    function animar() {
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+
+        x += dx;
+        y += dy;
+
+        if (x <= 0 || x + size >= w) dx *= -1;
+        if (y <= 0 || y + size >= h) dy *= -1;
+
+        pelota.style.left = x + "px";
+        pelota.style.top = y + "px";
+
+        requestAnimationFrame(animar);
+    }
+
+    animar();
+})();
+</script>
 
 </body>
 </html>
